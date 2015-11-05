@@ -1,0 +1,83 @@
+* Talk on Nov 16th 1400-1600 20151115TZ1400 
+[[https://github.com/No9/dublinjs-2015-10-06/blob/master/CHROMIUMIFY.pdf][anton's presentation]] 
+
+anton:  @dhigit9 git:@no9 
+aman:   @akohli git:akohli 
+alex: 
+
+* Original request
+And the original request from tCD  to the taught masters students There's a two-hour slot on Monday 16th November (2:00pm to 4:00pm) which is available. Could you do both the "Architecture" lecture (which I think we did in a one-hour slot previously) and also the "Decentralised Control" lecture in the 2nd slot? Would that work?
+
+* Decentralised and P2P Technologies
+  You've heard of bitcoin, bitorrent
+  And you might remember napster
+  Strcuture needs to be worked on, but let's capture overall outline and build from there 
+
+* Cover key concepts
+Decentralisation
+Peer to Peer
+Dealing with Routing and Discovery, key arch components 
+** Overview of why these are issues
+How does peer to peer work viz transfer of data ? 
+Contrast data transfer of centralised vs decentralised models 
+Why this is good
+** Networking Protocols: 
+UDP, TCP, Bluetooth 
+** Discoverabilty
+DHTs
+Magnet Links 
+Examples - distributed hash tables
+* Rewind
+  The web, a computer, connect to others to share research
+  Web 1.0 1996
+  Web 2.0 2000
+  Web 3.0 now 
+
+* About what's used
+
+  NEVER WENT AWAY   
+  BITTORRENT 20% OF NORTH AMERICAN TRAFFIC   
+  RICHER CONTENT NEEDS NEW SOLUTIONS  
+
+  Don't forget Apple Watch, Location Based computing
+  <<insert picture of a beacon>>
+  use p2p 
+
+* New Webs
+  firechat – Adhoc Chat Network 
+  kwizzi – 0 internet eduction 
+  Ebola Relief - field recording
+  WebRTC
+
+* Content Addressable Networks
+WikiDB – Fork Friendly Content Addressable Network
+Discovery – SSDP Implementation 
+UI – Ghost Blogging Platform 
+Web Server - For Browser Clients
+
+* Distributed HashTables? 
+
+* Communications and collaboration
+Talk about firechat, webtorrent
+Apple "Handoff"
+
+* Blockchain
+** How does blockchain work 
+*** overview of blockchain and distributed ledgers
+**** BTC
+
+  Would also like to compare and contrast current blockchain
+  implementations .g ethereum vs more composable approaches offered by
+  ipfs
+
+  Compare a BTC payment to a credit card one (include settlement)
+**** Distributed Ledgers 
+what why how
+
+** Your Toolbag
+Chormunify
+Torrent tech
+BTC and Ethereum stacks
+BLE/Multipeer networking APIs
+ 
+
