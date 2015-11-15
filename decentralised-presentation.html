@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Decentralisation + P2P </title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="anton, aman">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+	
+        <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="css/zenburn.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+
+    <body>
+      <div class="reveal">
+	<div class="slides">
+	  <section>
+	    <h2>Decentralisation</h2>
+	    <h3>Distributed Computing on a Massive Scale</h3>
+	    <h5>Living with Decentralization, P2P and the new Web</h5>
+	    <p> Aton Whalley <a href="http://twitter.com/digit9">@dhigit9</a> Aman Kohli <a href="http://twitter.com/akohli">@akohli</a> and thanks to Alex! </p>
+	  </section>
+
+	  <section id="fragments">
+	    <h4>Computers - Connected</h4>
+	    <h5>How we think it Looks</h5>
+	    <h5>How it looks</h5>
+	    <p class="fragment"> 2 pictures </p>
+	  </section>
+
+	  <section id="fragments">
+	    <h3>Devices</h3>
+	    <div align="left">
+	      <div class="fragment">
+		<p> From workstations and supercomputers (thousands)</p>
+		<p> To Desktop and Laptops in offices (millions)</p>
+		<p> ... and homes (tens of millions)</p>
+	      </div>
+	      <p class="fragment"> to Mobiles, tablets and devices (hundreds of millions)</p>
+	    </div>
+	  </section>
+
+	  <section data-background="AUSTIN-POWERS.jpg">
+	    <div style="color:white">
+		<p>Now lots of things</p>
+		<h6><i style="color:#F2F5A9"> An Internet of Things</i></h6>
+		<p><i>billions</i></p>
+	    </div>
+	  </section>
+	  
+	  <section>
+	    <h2>Beware the Fallacies</h2>
+	    <p>
+	      <OL>
+		<div class="fragment">
+		  <li> The network is reliable.
+		  <li> Latency is zero.
+		  <li> Bandwidth is infinite.
+		</div>
+		<div class="fragment">
+		  <li> The network is secure.
+		  <li> Topology doesn't change.
+		  <li> There is one administrator.
+		</div>
+		<div class="fragment fade-in">
+		  <li> Transport cost is zero.
+		  <li> The network is homogeneous.
+		</div>
+	      </OL>
+	      <div class="fragment">... thanks <a href="https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing">wikipedia</a>
+	    </div></p>
+	  </section>
+
+	  <section data-background="#dddddd">
+	    <h1>It's a Mesh of a Mess<h1>
+	  </section>
+
+	  <section>
+	    <h2>Concurrency</h2>
+	    <p>	      
+	      Concurrency: sets of events which happen simultaneously. The real world is concurrent, and consists of a large number of events many of which happen simultaneously. 
+	      Concurrent (two queues and one processor) and Parallel Programming (two queues and two processors)
+	      Systems may be distributed over several computers: a system which is designed to be implemented as a number of independent concurrent processes can be implemented on a multi-processor or run on a distributed network of processors.	      
+	    </p>
+	  </section>
+	  
+	  <section>
+	    <h2>CAP</h2>
+	    <h5 align="left">The Three Choices </h5>
+	    <p>
+	      The CAP speaks of access to data, that data being in the <i>right</i> state and it is always possible to get to it<p>
+	      <dl>
+		<dt>Consistency</dt>
+		<dd>all nodes have the same data state </dd>
+		<dt>Availability</dt>
+		<dd>the system can send and receive responses</dd>
+		<dt>Partition Tolerance</dt>
+		<dd>The system can keep functioning in the face of arbitrary network failures</dd>
+	      </dl>
+	      
+	    </p>
+	  </section>
+	  
+	  <section>
+	    <h2>Consensus</h2>
+	    <p algin="left">
+	      distributed processing: a network of distributed processors
+
+	      isolation :  Two processes operating on the same machine must be as independent as if they ran on physically separated machines. Without sharing, everything necessary to perform a distributed computation must be copied. 
+	      
+	      Interprocess synchronisation can be based on what is referred to as casual ordering in distributed systems theory: If A sends a message to B then B can only receive this message at some point in time after A  sent the message.
+   Casual ordering in distributed systems theory: interprocess synchronisation can be based on this simple idea.
+	      
+	    </p>
+	  </section>
+
+	  <section>
+	    <h1>Rewind - The Web</h1>
+	  </section>
+
+	  <section>
+	    <h2>The Web</h2>
+	    <p align="left">The web, a computer, to connect to others to share research</p>
+	    <ul align="left">
+	      <li> Web 1.0 1996
+	      <li> Web 2.0 2000
+	      <li> Web 3.0 <em>now</em>
+	  </section>
+
+	  <section>
+	    <h3>Connecting Computers</h3>
+	    <ul align="left">
+	      <li> how do we name things
+	      <li> how do connect to things 
+	      <li> how do we talk to things
+	    </ul>
+	    <p><b>Now</b> DNS - TCP/IP - HTTP</p>
+	  </section>
+	  
+
+	  <section>
+	    <h3>Now to Decentralization</h3>
+	    You've heard of bitcoin, bitorrent
+	    BITTORRENT 20% OF NORTH AMERICAN TRAFFIC   
+	    RICHER CONTENT NEEDS NEW SOLUTIONS  
+	    And you might remember napster
+
+	    pictures of BTC BitTorrect and Napster
+	  </section>
+
+	  <section>
+	    <h3>How do they connect and interact</h3>
+	    
+	    <p>Connectivity</p>
+	    <ul>
+	      <li> Bluetooth if near by
+	      <li> UDP if about
+	      <li> TCP if you must
+	      <li> delay tolerant protocols if things are far away
+	    </ul>
+	    <p>Discoverability </p>
+	    <ul>
+	      <li> DHT
+	      <li> Magnet Links
+	    </ul>
+	    
+	    <p>Communication Protocols</p>
+	    <ul>
+	      <li> secure
+	      <li> retransmittable
+	      <li> simple
+	    </ul>
+	  </section>
+
+	  <section>
+	    <h3>New Webs</h3>
+	    <ul>
+	      <li> WebRTC
+	      <li> firechat – Adhoc Chat Network 
+	      <li>kwizzi – 0 internet eduction 
+	      <li>Ebola Relief - field recording
+	    </ul>
+	  </section>
+	  
+	  <section>
+	    <h3>New Webs</h3>
+	    <div align="left">
+	      <ul>
+		<li> WebRTC
+		<li> firechat – Adhoc Chat Network 
+		<li>kwizzi – 0 internet eduction 
+		<li>Ebola Relief - field recording
+	      </ul>
+	      
+	      <h4> Content Addressable Networks</h4>
+	      <ul>
+		<li> WikiDB – Fork Friendly Content Addressable Network
+		<li> Discovery – SSDP Implementation 
+		<li> UI – Ghost Blogging Platform 
+		<li> Web Server - For Browser Clients
+	      </ul>
+	    </div>
+	  </section>
+
+
+	  <section>
+	    <h3> Interplanetary File System</h3>
+	    <h5>IPFS</h5>
+	    <p>
+   Interplanetary File System (IPFS) - Content Addressed, Versioned, P2P File System -could be seen as a single BitTorrent swarm
+- a high throughput content addressed block-storage mechanism -combines DHT,  an incentivized block exchange and a self-certifying namespace
+  Using networks to propagate state transitions Centralised Characteristics Distributed Characteristics Decentralized Characteristics Mesh Variations Peer-to-Peer Models Decentralized Application (DA) challenges introduced by distributed and decentralized peer-to-peer systems CAP theorem distributed systems models that describe the bounds (interaction, failure, security) problems In asynchronous distributed systems	      
+	    </p>
+	  </section>
+
+	  <section>
+	    <h3>The Blockchain and Distributed Ledgers</h3>
+	    <ul>
+	      <li> consensus
+	      <li> security
+	    </ul>
+	    <p>
+	      in action...
+	      **** How does blockchain work 
+	      ***** overview of blockchain and distributed ledgers
+	      ***** BTC
+	      
+	      Would also like to compare and contrast current blockchain
+	      implementations .g ethereum vs more composable approaches offered by
+	      ipfs
+	      
+	      Compare a BTC payment to a credit card one (include settlement)
+	      **** Distributed Ledgers 
+	      what why how
+	    </p>
+	  </section>
+	  
+	  <section>
+	    <h3>Your Toolbag</h3>
+	    <ul>
+	      <li> Chormunify
+	      <li> Torrent tech
+	      <li> BTC and Ethereum stacks
+	      <li> BLE/Multipeer networking APIs
+	      </li>
+	  </section>
+
+	  <section>
+	    <h1>Fin</h1>
+	  </section>
+	  
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+      // Optional reveal.js plugins
+      dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true },
+      { src: 'plugin/notes/notes.js', async: true }
+      ]
+      });
+
+    </script>
+
+    <!-- Everything below this point is only used for the reveal.js demo page -->
+
+    <a class="fork-reveal" style="display: none;" href="https://github.com/hakimel/reveal.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork reveal.js on GitHub"></a>
+
+    <div class="share-reveal" style="display: none; position: absolute; bottom: 16px; left: 50%; margin-left: -139px; z-index: 20;">
+      <a class="share-reveal-editor" href="http://slides.com">Try the visual editor</a>
+
+      <a class="share-reveal-facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Flab.hakim.se%2Freveal-js">
+        <svg viewBox="-8 -8 48 48" width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#FFFFFF" d="M25.613-4.557c0,0-3.707,0-6.166,0c-3.662,0-7.732,1.535-7.732,6.835c0.019,1.845,0,3.613,0,5.603H7.481 v6.728h4.366v19.37h8.021V14.48h5.295l0.479-6.618h-5.913c0,0,0.016-2.946,0-3.8c0-2.093,2.184-1.974,2.312-1.974 c1.042,0,3.059,0.003,3.578,0v-6.646H25.613z"/>
+        </svg>
+      </a>
+
+      <a class="share-reveal-twitter" href="http://twitter.com/share?url=http%3A%2F%2Flab.hakim.se%2Freveal-js&text=reveal.js%20-%20The%20HTML%20presentation%20framework&via=revealjs&related=revealjs">
+        <svg viewbox="0 0 2000 1625.36" width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path d="m 1999.9999,192.4 c -73.58,32.64 -152.67,54.69 -235.66,64.61 84.7,-50.78 149.77,-131.19 180.41,-227.01 -79.29,47.03 -167.1,81.17 -260.57,99.57 C 1609.3399,49.82 1502.6999,0 1384.6799,0 c -226.6,0 -410.328,183.71 -410.328,410.31 0,32.16 3.628,63.48 10.625,93.51 -341.016,-17.11 -643.368,-180.47 -845.739,-428.72 -35.324,60.6 -55.5583,131.09 -55.5583,206.29 0,142.36 72.4373,267.95 182.5433,341.53 -67.262,-2.13 -130.535,-20.59 -185.8519,-51.32 -0.039,1.71 -0.039,3.42 -0.039,5.16 0,198.803 141.441,364.635 329.145,402.342 -34.426,9.375 -70.676,14.395 -108.098,14.395 -26.441,0 -52.145,-2.578 -77.203,-7.364 52.215,163.008 203.75,281.649 383.304,284.946 -140.429,110.062 -317.351,175.66 -509.5972,175.66 -33.1211,0 -65.7851,-1.949 -97.8828,-5.738 181.586,116.4176 397.27,184.359 628.988,184.359 754.732,0 1167.462,-625.238 1167.462,-1167.47 0,-17.79 -0.41,-35.48 -1.2,-53.08 80.1799,-57.86 149.7399,-130.12 204.7499,-212.41" style="fill:#ffffff"/>
+        </svg>
+      </a>
+    </div>
+
+    <style>
+      /* Social sharing */
+      .share-reveal a {
+      display: inline-block;
+      height: 34px;
+      line-height: 34px;
+      padding: 0 10px;
+      color: #fff;
+      font-family: Helvetica;
+      text-decoration: none;
+      font-size: 12px;
+      vertical-align: top;
+      text-transform: uppercase;
+      box-sizing: border-box;
+      }
+
+      .share-reveal svg {
+      vertical-align: middle;
+      }
+
+      .share-reveal a + a {
+      margin-left: 10px;
+      }
+
+      .share-reveal-editor {
+      border: 2px solid #fff;
+      }
+
+      .share-reveal-twitter,
+      .share-reveal-follow {
+      background-color: #00aced;
+      }
+
+      .share-reveal-facebook {
+      background-color: #4B71B8;
+      }
+
+      /* Advertising */
+      #carbonads {
+      width: 370px;
+      min-height: 100px;
+      font-size: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 10px;
+      margin: 40px auto 0 auto;
+      font-size: 16px;
+      z-index: 10;
+      text-align: left;
+      }
+
+      #carbonads .carbon-img img {
+      float: left;
+      margin: 0 10px 0 0;
+      border: 0;
+      box-shadow: none;
+      }
+
+      #carbonads .carbon-poweredby {
+      display: block;
+      margin-top: 10px;
+      color: #aaa;
+      }
+    </style>
+
+    <script>
+      var _gaq = [['_setAccount', 'UA-15240703-1'], ['_trackPageview']];
+      (function(d, t) {
+      var g = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+      })(document, 'script');
+    </script>
+
+    <script>
+      [].slice.call( document.querySelectorAll( '.share-reveal-facebook, .share-reveal-twitter' ) ).forEach( function( element ) {
+      element.addEventListener( 'click', function( event ) {
+      event.preventDefault();
+      var width = 500, height = 300;
+      var winTop = window.screenY + (window.screen.height / 2) - (height / 2);
+      var winLeft = window.screenX + (window.screen.width / 2) - (width / 2);
+      window.open(this.href, 'shre', 'top=' + winTop + ',left=' + winLeft + ',toolbar=0,status=0,width=' + width + ',height=' + height);
+      } );
+      } );
+
+      if( !navigator.userAgent.match( /(iphone|android)/gi ) && !!document.querySelector ) {
+      document.querySelector( '.share-reveal' ).style.display = 'block';
+      document.querySelector( '.fork-reveal' ).style.display = 'block';
+      }
+    </script>
+
+    </body>
+</html>
