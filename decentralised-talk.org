@@ -1,3 +1,4 @@
+#+STARTUP: showeverything 
 * Talk on Nov 16th 1400-1600 20151115TZ1400 
 [[https://github.com/No9/dublinjs-2015-10-06/blob/master/CHROMIUMIFY.pdf][anton's presentation]] 
 
@@ -5,8 +6,128 @@ anton:  @dhigit9 git:@no9
 aman:   @akohli git:akohli 
 alex: 
 
+* Talk
+** Computers, Connected
+  How we think it looks
+  How it looks 
+*** mesh of clients, into datacentres into clouds, into CDNs 
+    Bear in Mind the 7 Fallacies of networks
+    and the CAP.  oh the CAP
+*** About Concurrency
+    bounds on what it is possible for consensus in asynchronous distributed systems FLP Upper Bound
+    Concurrency: sets of events which happen simultaneously. The real world is concurrent, and consists of a large number of events many of which happen simultaneously. 
+    Concurrent (two queues and one processor) and Parallel Programming (two queues and two processors)
+    Systems may be distributed over several computers: a system which is designed to be implemented as a number of independent concurrent processes can be implemented on a multi-processor or run on a distributed network of processors.
+
+*** Consensus 
+    distributed processing: a network of distributed processors
+
+    isolation :  Two processes operating on the same machine must be as independent as if they ran on physically separated machines. Without sharing, everything necessary to perform a distributed computation must be copied. 
+
+   Interprocess synchronisation can be based on what is referred to as casual ordering in distributed systems theory: If A sends a message to B then B can only receive this message at some point in time after A  sent the message.
+   Casual ordering in distributed systems theory: interprocess synchronisation can be based on this simple idea.
+
+*** About resilience and consensus   
+** Rewind
+  The web, a computer, connect to others to share research
+  Web 1.0 1996
+  Web 2.0 2000
+  Web 3.0 now 
+** Distributed Systems 101
+    how do we name things
+    how do connect to things 
+    how do we talk to things
+
+    Now: IP+DNS, TCP, HTTP
+    But also....
+
+** Decentralised and P2P Technologies
+  You've heard of bitcoin, bitorrent
+    BITTORRENT 20% OF NORTH AMERICAN TRAFFIC   
+    RICHER CONTENT NEEDS NEW SOLUTIONS  
+  And you might remember napster
+  Strcuture needs to be worked on, but let's capture overall outline and build from there 
+*** Cover key concepts
+  Decentralisation
+  Peer to Peer
+  Dealing with Routing and Discovery, key arch components 
+*** Overview of why these are issues
+   How does peer to peer work viz transfer of data ? 
+   Contrast data transfer of centralised vs decentralised models 
+   Why this is good
+*** So....
+    Connectivity - UDP, TCP, Bluetooth
+    Discoverability - DHT, Magnet Links 
+    but more 
+    NEVER WENT AWAY   
+    
+    Don't forget Apple Watch, Location Based computing
+
+*** New Webs
+  firechat – Adhoc Chat Network 
+  kwizzi – 0 internet eduction 
+  Ebola Relief - field recording
+  WebRTC
+
+*** Content Addressable Networks
+   WikiDB – Fork Friendly Content Addressable Network
+   Discovery – SSDP Implementation 
+   UI – Ghost Blogging Platform 
+   Web Server - For Browser Clients
+
+*** IPFS
+   Interplanetary File System (IPFS) - Content Addressed, Versioned, P2P File System -could be seen as a single BitTorrent swarm
+- a high throughput content addressed block-storage mechanism -combines DHT,  an incentivized block exchange and a self-certifying namespace
+  Using networks to propagate state transitions Centralised Characteristics Distributed Characteristics Decentralized Characteristics Mesh Variations Peer-to-Peer Models Decentralized Application (DA) challenges introduced by distributed and decentralized peer-to-peer systems CAP theorem distributed systems models that describe the bounds (interaction, failure, security) problems In asynchronous distributed systems
+
+
+*** Blockchain
+**** How does blockchain work 
+***** overview of blockchain and distributed ledgers
+***** BTC
+
+  Would also like to compare and contrast current blockchain
+  implementations .g ethereum vs more composable approaches offered by
+  ipfs
+
+  Compare a BTC payment to a credit card one (include settlement)
+**** Distributed Ledgers 
+what why how
+
+*** Your Toolbag
+Chormunify
+Torrent tech
+BTC and Ethereum stacks
+BLE/Multipeer networking APIs
+   
+
 * Original request
-And the original request from tCD  to the taught masters students There's a two-hour slot on Monday 16th November (2:00pm to 4:00pm) which is available. Could you do both the "Architecture" lecture (which I think we did in a one-hour slot previously) and also the "Decentralised Control" lecture in the 2nd slot? Would that work?
+  And the original request from tCD  to the taught masters students There's a two-hour slot on Monday 16th November (2:00pm to 4:00pm) which is available. Could you do both the "Architecture" lecture (which I think we did in a one-hour slot previously) and also the "Decentralised Control" lecture in the 2nd slot? Would that work?
+
+* Alex notes
+** Broken Web
+   The Web and software is a total mess  as it has evolved faster than our ability to understand what we are doing.  
+   "how do we keep track of things" --> "how do we name things"  -->  Naming things by their content Uniquely named data as a core Internet principle  -(Information-Centric Networking (ICN) / Named Data Networking (NDN) / CCN
+** IPFS 
+   Interplanetary File System (IPFS) - Content Addressed, Versioned, P2P File System -could be seen as a single BitTorrent swarm
+- a high throughput content addressed block-storage mechanism -combines DHT,  an incentivized block exchange and a self-certifying namespace
+  Using networks to propagate state transitions Centralised Characteristics Distributed Characteristics Decentralized Characteristics Mesh Variations Peer-to-Peer Models Decentralized Application (DA) challenges introduced by distributed and decentralized peer-to-peer systems CAP theorem distributed systems models that describe the bounds (interaction, failure, security) problems In asynchronous distributed systems
+  in a distributed system, we might receive a message informing us that a process has died, when in fact a network error has occurred.
+  # How can we handle hardware errors in a distributed system -replication, and for total failure we need another computer
+  # In a distributed system, rather than system failure we need to talk about a measure of degradation of service quality.
+  # Failure modes
+  # Consensus
+bounds on what it is possible for consensus in asynchronous distributed systems FLP Upper Bound
+** Concurrency: sets of events which happen simultaneously. The real world is concurrent, and consists of a large number of events many of which happen simultaneously. 
+   Concurrent (two queues and one processor) and Parallel Programming (two queues and two processors)
+   Systems may be distributed over several computers: a system which is designed to be implemented as a number of independent concurrent processes can be implemented on a multi-processor or run on a distributed network of processors.
+
+   distributed processing: a network of distributed processors
+
+   isolation :  Two processes operating on the same machine must be as independent as if they ran on physically separated machines. Without sharing, everything necessary to perform a distributed computation must be copied. 
+
+   Interprocess synchronisation can be based on what is referred to as casual ordering in distributed systems theory: If A sends a message to B then B can only receive this message at some point in time after A  sent the message.
+   Casual ordering in distributed systems theory: interprocess synchronisation can be based on this simple idea.
 
 * Decentralised and P2P Technologies
   You've heard of bitcoin, bitorrent
@@ -14,19 +135,19 @@ And the original request from tCD  to the taught masters students There's a two-
   Strcuture needs to be worked on, but let's capture overall outline and build from there 
 
 * Cover key concepts
-Decentralisation
-Peer to Peer
-Dealing with Routing and Discovery, key arch components 
+  Decentralisation
+  Peer to Peer
+  Dealing with Routing and Discovery, key arch components 
 ** Overview of why these are issues
-How does peer to peer work viz transfer of data ? 
-Contrast data transfer of centralised vs decentralised models 
-Why this is good
+   How does peer to peer work viz transfer of data ? 
+   Contrast data transfer of centralised vs decentralised models 
+   Why this is good
 ** Networking Protocols: 
-UDP, TCP, Bluetooth 
+   UDP, TCP, Bluetooth 
 ** Discoverabilty
-DHTs
-Magnet Links 
-Examples - distributed hash tables
+   DHTs
+   Magnet Links 
+   Examples - distributed hash tables
 * Rewind
   The web, a computer, connect to others to share research
   Web 1.0 1996
