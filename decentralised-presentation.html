@@ -36,7 +36,7 @@
 	  <h2>Decentralisation</h2>
 	  <h3>Distributed Computing on a Massive Scale</h3>
 	  <h5>Living with Decentralization, P2P and the new Web</h5>
-	  <p> Aton Whalley <a href="http://twitter.com/digit9">@dhigit9</a> Aman Kohli <a href="http://twitter.com/akohli">@akohli</a> and thanks to Alex MacMahon! </p>
+	  <p> Aton Whalley <a href="http://twitter.com/digit9">@dhigit9</a> Aman Kohli <a href="http://twitter.com/akohli">@akohli</a> and thanks to Alex McMahon! </p>
 	</section>
 
 	<section>
@@ -84,6 +84,32 @@
 	  <h1>It's a Mesh of a Mess<h1>
 	</section>
 
+
+        <section>
+          <h4>Worked Example</h4>
+          <p>5 of friends want to arrange where to meet on Saturday night</p>
+          <ol>
+            <li> when all friends are in the same room
+            <li> when all friends are in different places
+              <ul>
+                <li> think about distributed concensus and the network
+              </ul>
+          </ol>
+        </section>
+
+	<section>
+	  <h2>Concurrency</h2>
+	  <ul>	      
+	    <li><b>Concurrency</b> sets of events which happen simultaneously. The real world is concurrent, and consists of a large number of events many of which happen simultaneously.
+            <li> <b>Parallel</b> happens at the same time
+          </ul>
+
+          <p> Concurrent (two queues and one processor) and Parallel Programming (two queues and two processors) </p> 
+          
+          <p>Systems may be distributed over several computers: a system of a number of independent concurrent processes.</p>
+          
+	</section>
+
         <section>
 	  <h2>Beware the Fallacies</h2>
 	  <p>
@@ -107,14 +133,6 @@
 	  </div></p>
 	</section>
 
-	<section>
-	  <h2>Concurrency</h2>
-	  <p>	      
-	    Concurrency: sets of events which happen simultaneously. The real world is concurrent, and consists of a large number of events many of which happen simultaneously. 
-	    Concurrent (two queues and one processor) and Parallel Programming (two queues and two processors)
-	    Systems may be distributed over several computers: a system which is designed to be implemented as a number of independent concurrent processes can be implemented on a multi-processor or run on a distributed network of processors.	      
-	  </p>
-	</section>
 	
 	<section>
 	  <h2>CAP</h2>
@@ -129,21 +147,16 @@
 	      <dt>Partition Tolerance</dt>
 	      <dd>The system can keep functioning in the face of arbitrary network failures</dd>
 	    </dl>
-	    
 	  </p>
 	</section>
 	
 	<section>
-	  <h2>Consensus</h2>
-	  <p algin="left">
-	    distributed processing: a network of distributed processors
-
-	    isolation :  Two processes operating on the same machine must be as independent as if they ran on physically separated machines. Without sharing, everything necessary to perform a distributed computation must be copied. 
-	    
-	    Interprocess synchronisation can be based on what is referred to as casual ordering in distributed systems theory: If A sends a message to B then B can only receive this message at some point in time after A  sent the message.
-            Casual ordering in distributed systems theory: interprocess synchronisation can be based on this simple idea.
-	    
-	  </p>
+	  <h2>System Properties</h2>
+          <ul>
+            <li>distributed processing: a network of distributed processors
+            <li>isolation :  Two processes operating on the same machine must be as independent as if they ran on physically separated machines. Without sharing, everything necessary to perform a distributed computation must be copied.
+            <li> Causal ordering:  If A sends a message to B then B can only receive this message at some point in time after A  sent the message.
+          </ul>
 	</section>
 
 	<section>
@@ -228,7 +241,8 @@
 	  </ul>
 	  <img src="netflixfra.jpg">
 	</section>
-	<section>
+
+        <section>
 	  <h3>IPFS - First Iteration of Web 4.0</h3> 
 	  <ul>
 	    <li> Removes address from content 
@@ -248,7 +262,7 @@
 	    <li>Ebola Relief - field recording
 	  </ul>
 	</section>
-        
+
 	<section>
 	  <h3>Conclusion</h3> 
 	  <img src="fileeq.png">
