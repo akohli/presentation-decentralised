@@ -1,276 +1,286 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Decentralisation + P2P </title>
+  <head>
+    <meta charset="utf-8">
+    <title>Decentralisation + P2P </title>
 
-        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-        <meta name="author" content="anton, aman">
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="anton, aman">
 
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-        <link rel="stylesheet" href="css/reveal.css">
-	
-        <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
-        <!-- Code syntax highlighting -->
-        <link rel="stylesheet" href="css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="css/zenburn.css">
 
-        <!-- Printing and PDF exports -->
-        <script>
-            var link = document.createElement( 'link' );
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-            document.getElementsByTagName( 'head' )[0].appendChild( link );
-        </script>
-    </head>
-
-    <body>
-      <div class="reveal">
-	<div class="slides">
-	  <section>
-	    <h2>Decentralisation</h2>
-	    <h3>Distributed Computing on a Massive Scale</h3>
-	    <h5>Living with Decentralization, P2P and the new Web</h5>
-	    <p> Aton Whalley <a href="http://twitter.com/digit9">@dhigit9</a> Aman Kohli <a href="http://twitter.com/akohli">@akohli</a> and thanks to Alex! </p>
-	  </section>
-
-	  <section id="fragments">
-	    <h4>Computers - Connected</h4>
-	    <h5>How we think it Looks</h5>
-	    <h5>How it looks</h5>
-	    <p class="fragment"> 2 pictures </p>
-	  </section>
-
-	  <section id="fragments">
-	    <h3>Devices</h3>
-	    <div align="left">
-	      <div class="fragment">
-		<p> From workstations and supercomputers (thousands)</p>
-		<p> To Desktop and Laptops in offices (millions)</p>
-		<p> ... and homes (tens of millions)</p>
-	      </div>
-	      <p class="fragment"> to Mobiles, tablets and devices (hundreds of millions)</p>
-	    </div>
-	  </section>
-
-	  <section data-background="AUSTIN-POWERS.jpg">
-	    <div style="color:white">
-		<p>Now lots of things</p>
-		<h6><i style="color:#F2F5A9"> An Internet of Things</i></h6>
-		<p><i>billions</i></p>
-	    </div>
-	  </section>
-	  
-	  <section>
-	    <h2>Beware the Fallacies</h2>
-	    <p>
-	      <OL>
-		<div class="fragment">
-		  <li> The network is reliable.
-		  <li> Latency is zero.
-		  <li> Bandwidth is infinite.
-		</div>
-		<div class="fragment">
-		  <li> The network is secure.
-		  <li> Topology doesn't change.
-		  <li> There is one administrator.
-		</div>
-		<div class="fragment fade-in">
-		  <li> Transport cost is zero.
-		  <li> The network is homogeneous.
-		</div>
-	      </OL>
-	      <div class="fragment">... thanks <a href="https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing">wikipedia</a>
-	    </div></p>
-	  </section>
-
-	  <section data-background="#dddddd">
-	    <h1>It's a Mesh of a Mess<h1>
-	  </section>
-
-	  <section>
-	    <h2>Concurrency</h2>
-	    <p>	      
-	      Concurrency: sets of events which happen simultaneously. The real world is concurrent, and consists of a large number of events many of which happen simultaneously. 
-	      Concurrent (two queues and one processor) and Parallel Programming (two queues and two processors)
-	      Systems may be distributed over several computers: a system which is designed to be implemented as a number of independent concurrent processes can be implemented on a multi-processor or run on a distributed network of processors.	      
-	    </p>
-	  </section>
-	  
-	  <section>
-	    <h2>CAP</h2>
-	    <h5 align="left">The Three Choices </h5>
-	    <p>
-	      The CAP speaks of access to data, that data being in the <i>right</i> state and it is always possible to get to it<p>
-	      <dl>
-		<dt>Consistency</dt>
-		<dd>all nodes have the same data state </dd>
-		<dt>Availability</dt>
-		<dd>the system can send and receive responses</dd>
-		<dt>Partition Tolerance</dt>
-		<dd>The system can keep functioning in the face of arbitrary network failures</dd>
-	      </dl>
-	      
-	    </p>
-	  </section>
-	  
-	  <section>
-	    <h2>Consensus</h2>
-	    <p algin="left">
-	      distributed processing: a network of distributed processors
-
-	      isolation :  Two processes operating on the same machine must be as independent as if they ran on physically separated machines. Without sharing, everything necessary to perform a distributed computation must be copied. 
-	      
-	      Interprocess synchronisation can be based on what is referred to as casual ordering in distributed systems theory: If A sends a message to B then B can only receive this message at some point in time after A  sent the message.
-   Casual ordering in distributed systems theory: interprocess synchronisation can be based on this simple idea.
-	      
-	    </p>
-	  </section>
-
-	  <section>
-	    <h1>Rewind - The Web</h1>
-	    <h3>A journey through web 1.0 - 4.0</h3>
-	  </section>
-	  
-	  <section>
-	    <h3>The Web 1.0 1993</h3>
-	    <p align="center">A computer, to connect to others to share research</p>
-	      <img src="tbl-pc.jpg" width="600" height="400">
-
-	  </section>
-
-	  <section>
-	    <h3>Why did Web 1.0 fail?</h3>
-	    <ul align="left">
-	      <li> IPv4 - Limited Public IP Address Range 
-	      <li> Bandwidth - Dialup/ADSL
-	      <li> DNS - Registration Non-trivial
-	      <li> Web 2.0  - Centralisation became good enough
-	    </ul>
-	  </section>
-	  
-	  <section>
-	    
-	    <h3>Web 2.0 Positives</h3>
-	    <ul align="left">
-	      <li> Browser Wars Mozilla vs Google
-	      <li> Closer Browser Implementations 
-	      <li> Enhanced Client Runtime - HTML 5 - CSS3
-	      <li> Large systems led to distributed systems theory moving out of academia - PAXOS to RAFT
-	      <li> Bittorrent 20% of North American Traffic
-	    </ul>
-	    </section>
-	    <section>
-	    <h3>To Web 3.0</h3>
-	    <ul align="left">
-	      <li> Symantic Web <br />
-	      	  lack of general-purpose usefulness that prevents the required effort from being invested
-	      <br/><br/>
-	      <li> Trust - THIS IS IMPORTANT
-	      <br/> Our ability to create our own gated networks will enable the next set of webs 
-	    </ul>
-	  </section>
-
-	  <section>
-	    <h3>Trust</h3>
-	    <ul>
-	    	<li>Reputation Based Trust
-	    	<li>Zero Trust  
-			<li>Policy Based Trust (NO THANKS)
-	    </ul>
-	  </section>
-
-	  <section>
-	    <h3>Reputation Based Trust</h3>
-	    <ul>
-	    	<li>Belief Ratings For Statements 
-			<li>Trust Rating Between Agents
-	    </ul>
-	    <br />
-	    <br />
-	    https://gist.github.com/pfraze/e314196dcecd4c49382d
-	  </section>
-	  <section>
-	    <h3>Web 4.0 Intelligent Personal Agents</h3>
-	    <ul>
-	      <li> Trust is now a solved problem 
-	      <li> IPv4 - Superceded by IPv6 
-	      <li> Bandwidth - Uplink and Downlink becoming larger 
-	      <li> DNS - Still the problem 
-	    </ul>
-	  </section>
-	  <section>
-	    <h3>The DNS Problem</h3> 
-	    <ul>
-	      <li> Not just a registration issue 
-	      <li> Attaches content to a location 
-	      <li> The current URL format <br/> https://gist.github.com/pfraze/e314196dcecd4c49382d 
-	      <li> Should be : e314196dcecd4c49382d/pfraze
-	    </ul>
-	    <img src="netflixfra.jpg">
-	    </section>
-	  <section>
-	    <h3>IPFS - First Iteration of Web 4.0</h3> 
-	    <ul>
-	      <li> Removes address from content 
-	      <li> Leverages distributed systems knowledge from 2.0
-	      <li> Transport agnostic so more efficient transports than HTTP can be used
-	      <li> Doesn't try to solve ALL the problems
-	      <li> https://ipfs.io/
-	    </ul>
-	    <img src="ipfs-logo-white.png">
-	    </section>
-
-	    <section>
-		    <h3>Alternative Webs</h3> 
-			<ul>
-			<li>firechat – Adhoc Chat Network 
-			<li>kwizzi – Zero internet eduction 
-			<li>Ebola Relief - field recording
-	    </ul>
-	    </section>
-	    <section>
-		    <h3>Conclusion</h3> 
-	    <img src="fileeq.png">
-	    </section>
-	  <section>
-
-	    <h1>Fin</h1>
-	  </section>
-	  
-
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
-
+    <!-- Printing and PDF exports -->
     <script>
-
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-      controls: true,
-      progress: true,
-      history: true,
-      center: true,
-
-      transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-      // Optional reveal.js plugins
-      dependencies: [
-      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-      { src: 'plugin/zoom-js/zoom.js', async: true },
-      { src: 'plugin/notes/notes.js', async: true }
-      ]
-      });
-
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
     </script>
+  </head>
 
-    </body>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+	<section>
+	  <h2>Decentralisation</h2>
+	  <h3>Distributed Computing on a Massive Scale</h3>
+	  <h5>Living with Decentralization, P2P and the new Web</h5>
+	  <p> Aton Whalley <a href="http://twitter.com/digit9">@dhigit9</a> Aman Kohli <a href="http://twitter.com/akohli">@akohli</a> and thanks to Alex MacMahon! </p>
+	</section>
+
+	<section>
+          <h2>The Internet</h2>
+          <h3>How non computer people think it works</h3>
+          <img src="connected-mess/Simple.png"/>
+        </section>
+
+	<section id="fragments">
+          <h2>How it works</h2>
+          <img src="connected-mess/not-simple.png" width="48%"/>
+          <h3 class="fragment">not really</h3>
+        </section>
+        
+	<section id="fragments">
+	  <h3>Devices</h3>
+	  <div align="left">
+	    <div class="fragment">
+	      <p> From workstations and supercomputers (thousands)</p>
+	      <p> To Desktop and Laptops in offices (millions)</p>
+	      <p> ... and homes (tens of millions)</p>
+	    </div>
+	    <p class="fragment"> to Mobiles, tablets and devices (hundreds of millions)</p>
+	  </div>
+	</section>
+
+
+	<section data-background="AUSTIN-POWERS.jpg">
+	  <div style="color:white">
+	    <p>Now lots of things</p>
+	    <h6><i style="color:#F2F5A9"> An Internet of Things</i></h6>
+	    <p><i>billions</i></p>
+	  </div>
+	</section>
+	
+
+	<section>
+          <img src="connected-mess/moar.png" width="45%"/>
+          <h4>ok, how it really works</h4>
+          <h5 class="fragment">kinda, sorta</h5>
+        </section>
+
+
+	<section data-background="#dddddd">
+	  <h1>It's a Mesh of a Mess<h1>
+	</section>
+
+        <section>
+	  <h2>Beware the Fallacies</h2>
+	  <p>
+	    <OL>
+	      <div class="fragment">
+		<li> The network is reliable.
+		<li> Latency is zero.
+		<li> Bandwidth is infinite.
+	      </div>
+	      <div class="fragment">
+		<li> The network is secure.
+		<li> Topology doesn't change.
+		<li> There is one administrator.
+	      </div>
+	      <div class="fragment fade-in">
+		<li> Transport cost is zero.
+		<li> The network is homogeneous.
+	      </div>
+	    </OL>
+	    <div class="fragment">... thanks <a href="https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing">wikipedia</a>
+	  </div></p>
+	</section>
+
+	<section>
+	  <h2>Concurrency</h2>
+	  <p>	      
+	    Concurrency: sets of events which happen simultaneously. The real world is concurrent, and consists of a large number of events many of which happen simultaneously. 
+	    Concurrent (two queues and one processor) and Parallel Programming (two queues and two processors)
+	    Systems may be distributed over several computers: a system which is designed to be implemented as a number of independent concurrent processes can be implemented on a multi-processor or run on a distributed network of processors.	      
+	  </p>
+	</section>
+	
+	<section>
+	  <h2>CAP</h2>
+	  <h5 align="left">The Three Choices </h5>
+	  <p>
+	    The CAP speaks of access to data, that data being in the <i>right</i> state and it is always possible to get to it<p>
+	    <dl>
+	      <dt>Consistency</dt>
+	      <dd>all nodes have the same data state </dd>
+	      <dt>Availability</dt>
+	      <dd>the system can send and receive responses</dd>
+	      <dt>Partition Tolerance</dt>
+	      <dd>The system can keep functioning in the face of arbitrary network failures</dd>
+	    </dl>
+	    
+	  </p>
+	</section>
+	
+	<section>
+	  <h2>Consensus</h2>
+	  <p algin="left">
+	    distributed processing: a network of distributed processors
+
+	    isolation :  Two processes operating on the same machine must be as independent as if they ran on physically separated machines. Without sharing, everything necessary to perform a distributed computation must be copied. 
+	    
+	    Interprocess synchronisation can be based on what is referred to as casual ordering in distributed systems theory: If A sends a message to B then B can only receive this message at some point in time after A  sent the message.
+            Casual ordering in distributed systems theory: interprocess synchronisation can be based on this simple idea.
+	    
+	  </p>
+	</section>
+
+	<section>
+	  <h1>Rewind - The Web</h1>
+	  <h3>A journey through web 1.0 - 4.0</h3>
+	</section>
+	
+	<section>
+	  <h3>The Web 1.0 1993</h3>
+	  <p align="center">A computer, to connect to others to share research</p>
+	  <img src="tbl-pc.jpg" width="600" height="400">
+
+	</section>
+
+	<section>
+	  <h3>Why did Web 1.0 fail?</h3>
+	  <ul align="left">
+	    <li> IPv4 - Limited Public IP Address Range 
+	    <li> Bandwidth - Dialup/ADSL
+	    <li> DNS - Registration Non-trivial
+	    <li> Web 2.0  - Centralisation became good enough
+	  </ul>
+	</section>
+	
+	<section>
+	  
+	  <h3>Web 2.0 Positives</h3>
+	  <ul align="left">
+	    <li> Browser Wars Mozilla vs Google
+	    <li> Closer Browser Implementations 
+	    <li> Enhanced Client Runtime - HTML 5 - CSS3
+	    <li> Large systems led to distributed systems theory moving out of academia - PAXOS to RAFT
+	    <li> Bittorrent 20% of North American Traffic
+	  </ul>
+	</section>
+	<section>
+	  <h3>To Web 3.0</h3>
+	  <ul align="left">
+	    <li> Symantic Web <br />
+	      lack of general-purpose usefulness that prevents the required effort from being invested
+	      <br/><br/>
+	    <li> Trust - THIS IS IMPORTANT
+	      <br/> Our ability to create our own gated networks will enable the next set of webs 
+	  </ul>
+	</section>
+
+	<section>
+	  <h3>Trust</h3>
+	  <ul>
+	    <li>Reputation Based Trust
+	    <li>Zero Trust  
+	    <li>Policy Based Trust (NO THANKS)
+	  </ul>
+	</section>
+
+	<section>
+	  <h3>Reputation Based Trust</h3>
+	  <ul>
+	    <li>Belief Ratings For Statements 
+	    <li>Trust Rating Between Agents
+	  </ul>
+	  <br />
+	  <br />
+	  https://gist.github.com/pfraze/e314196dcecd4c49382d
+	</section>
+	<section>
+	  <h3>Web 4.0 Intelligent Personal Agents</h3>
+	  <ul>
+	    <li> Trust is now a solved problem 
+	    <li> IPv4 - Superceded by IPv6 
+	    <li> Bandwidth - Uplink and Downlink becoming larger 
+	    <li> DNS - Still the problem 
+	  </ul>
+	</section>
+	<section>
+	  <h3>The DNS Problem</h3> 
+	  <ul>
+	    <li> Not just a registration issue 
+	    <li> Attaches content to a location 
+	    <li> The current URL format <br/> https://gist.github.com/pfraze/e314196dcecd4c49382d 
+	    <li> Should be : e314196dcecd4c49382d/pfraze
+	  </ul>
+	  <img src="netflixfra.jpg">
+	</section>
+	<section>
+	  <h3>IPFS - First Iteration of Web 4.0</h3> 
+	  <ul>
+	    <li> Removes address from content 
+	    <li> Leverages distributed systems knowledge from 2.0
+	    <li> Transport agnostic so more efficient transports than HTTP can be used
+	    <li> Doesn't try to solve ALL the problems
+	    <li> https://ipfs.io/
+	  </ul>
+	  <img src="ipfs-logo-white.png">
+	</section>
+
+	<section>
+	  <h3>Alternative Webs</h3> 
+	  <ul>
+	    <li>firechat – Adhoc Chat Network 
+	    <li>kwizzi – Zero internet eduction 
+	    <li>Ebola Relief - field recording
+	  </ul>
+	</section>
+        
+	<section>
+	  <h3>Conclusion</h3> 
+	  <img src="fileeq.png">
+	</section>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+          // Full list of configuration options available at:
+          // https://github.com/hakimel/reveal.js#configuration
+          Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: true,
+
+          transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+          // Optional reveal.js plugins
+          dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+          ]
+          });
+
+        </script>
+
+  </body>
 </html>
